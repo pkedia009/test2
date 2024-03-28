@@ -35,5 +35,6 @@ resource "aws_eks_node_group" "eks_ng_gpu" {
 
   tags = {
     Name = "GPU-Node-Group"
+    gpu  = "true"
   }
 }
