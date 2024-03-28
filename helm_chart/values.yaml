@@ -4,6 +4,10 @@
 
 replicaCount: 5
 
+
+createNamespace: true
+namespaceName: data-pg
+
 image:
   repository: 211223789150.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo
   pullPolicy: IfNotPresent
