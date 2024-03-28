@@ -48,6 +48,11 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.gpuEnabled }}
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
