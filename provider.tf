@@ -17,12 +17,7 @@ terraform {
   }
 }
 
-#proivder block
-provider "aws" {
-  region="us-east-1"
 
-  #profile="dev"
-}
 
 provider "kubernetes" {
   host = data.terraform_remote_state.eks.outputs.cluster_endpoint 
@@ -38,22 +33,6 @@ provider "helm" {
 }
 
 
-/*
-terraform {
-  required_providers {
-    aws = {
-      version = "~> 2.13.0"
-    }
-    random = {
-      version = ">= 2.1.2"
-    }
-  }
-
-  required_version = "~> 0.12.29"
-}
-
-*/
-######remote state backend for eks cluster in s3 bucket#############
 
 
 
