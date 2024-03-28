@@ -94,8 +94,8 @@ efs:
   fileSystemId: fs-12345678
 
 
-
-  # values.yaml
+nodeSelector:
+  gpu: "true" 
 
 mongodb:
   replicaCount: 1
