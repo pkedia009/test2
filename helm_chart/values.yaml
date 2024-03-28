@@ -92,3 +92,24 @@ efs:
   path: /
   region: us-east-1
   fileSystemId: fs-12345678
+
+
+
+  # values.yaml
+
+mongodb:
+  replicaCount: 1
+
+  image:
+    repository: mongo
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  resources:
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+    requests:
+      cpu: "100m"
+      memory: "256Mi"
+
