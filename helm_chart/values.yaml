@@ -99,6 +99,7 @@ efs:
 
 mongodb:
   replicaCount: 1
+  
 
   image:
     repository: mongo
@@ -112,4 +113,6 @@ mongodb:
     requests:
       cpu: "100m"
       memory: "256Mi"
+
+  storageSize: 10Gi
 
